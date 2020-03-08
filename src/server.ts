@@ -29,10 +29,10 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
 
   app.get('/filteredimage', (req , res) =>{
-    let img_url = req.query.image_url;
+    let img_url : string = req.query.image_url;
     if (img_url) {
-    let paths = filterImageFromURL(img_url);
-    var files = new Array();
+    let paths : Promise<string> = filterImageFromURL(img_url);
+    let files : string[] = new Array();
     const delay = require('delay');
     paths.then(function(value){
       (async () => {
