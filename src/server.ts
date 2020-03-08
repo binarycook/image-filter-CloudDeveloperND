@@ -1,8 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
-import { pathToFileURL } from 'url';
-import { delay } from 'bluebird';
 
 (async () => {
 
